@@ -12,20 +12,20 @@ class FullscreenWindow:
         self.tk.configure(background='black')
         self.topFrame = Frame(self.tk, background = 'black')
         self.bottomFrame = Frame(self.tk, background = 'black')
-        self.topFrame.pack(side = TOP, fill=BOTH, expand = YES)
-        self.bottomFrame.pack(side = BOTTOM, fill=BOTH, expand = YES)
+        self.topFrame.pack(side = LEFT, fill=BOTH, expand = YES)
+        self.bottomFrame.pack(side = RIGHT, fill=BOTH, expand = YES)
         self.state = False
         self.tk.bind("<Return>", self.toggle_fullscreen)
         self.tk.bind("<Escape>", self.end_fullscreen)
         # clock
         self.clock = Clock(self.topFrame)
-        self.clock.pack(side=RIGHT, anchor=N, padx=100, pady=60)
+        self.clock.pack(side=TOP, anchor=NW, padx=100, pady=60)
         # weather
         self.weather = Weather(self.topFrame, self.clock.day_of_week1)
-        self.weather.pack(side=LEFT, anchor=N, padx=100, pady=(60, 0))
+        self.weather.pack(side=TOP, anchor=N, padx=100, pady=(60, 0))
         # news
         self.news = News(self.bottomFrame)
-        self.news.pack(side=LEFT, anchor=S, padx=100, pady=(0,30))
+        self.news.pack(side=RIGHT, anchor=N, padx=100, pady=(80,0))
         # calender - removing for now
         # self.calender = Calendar(self.bottomFrame)
         # self.calender.pack(side = RIGHT, anchor=S, padx=100, pady=60)

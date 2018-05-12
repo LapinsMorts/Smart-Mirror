@@ -22,13 +22,13 @@ class Weather(Frame):
         self.temperatureLbl = Label(self.degreeFrm, font=(config["font_family"], config["xlarge_text_size"]), fg="white", bg="black")
         self.temperatureLbl.pack(side=LEFT, anchor=N)
         self.iconLbl = Label(self.degreeFrm, bg="black")
-        self.iconLbl.pack(side=LEFT, anchor=N, padx=20)
+        self.iconLbl.pack(side=LEFT, anchor=CENTER, padx=20)
         self.currentlyLbl = Label(self, font=(config["font_family"], config["medium_text_size"]), fg="white", bg="black")
-        self.currentlyLbl.pack(side=TOP, anchor=W)
+        self.currentlyLbl.pack(side=TOP, anchor=W, padx=(11, 0))
         self.forecastLbl = Label(self, font=(config["font_family"], config["small_text_size"]), fg="white", bg="black", wraplength=config["weather_forecast_wrap_width"], justify=LEFT)
-        self.forecastLbl.pack(side=TOP, anchor=W, pady=(0, 10))
+        self.forecastLbl.pack(side=TOP, anchor=W, pady=(0, 10), padx=(11, 0))
         self.locationLbl = Label(self, font=(config["font_family"], config["small_text_size"]), fg="white", bg="black")
-        self.locationLbl.pack(side=TOP, anchor=W, pady=(0, 20))
+        self.locationLbl.pack(side=TOP, anchor=W, pady=(0, 20), padx=(11, 0))
         self.next_days = [ForecastedWeather(self) for i in range(config['days_forecasted'])]
 
         self.get_weather()
@@ -117,7 +117,7 @@ class Weather(Frame):
                     mx = str(round(forecast["temperatureHigh"], 0))[:-2] + degree_sign if forecast["temperatureHigh"] is not None else ""
                     self.next_days[i].destroy()
                     self.next_days[i] = ForecastedWeather(self, d, ic, mn, mx)
-                    self.next_days[i].pack(side=TOP, anchor=W, pady=10)
+                    self.next_days[i].pack(side=TOP, anchor=W, pady=10, padx=(11, 0))
                     i += 1
 
 

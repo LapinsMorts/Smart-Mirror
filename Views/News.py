@@ -24,7 +24,7 @@ class News(Frame):
 
             feed = feedparser.parse(config["headlines_url"])
 
-            for post in feed.entries[0:5]:
+            for post in feed.entries[0:config["news_headlines"]]:
                 headline = NewsHeadline(self.headlinesContainer, post.title)
                 headline.pack(side=TOP, anchor=W)
         except Exception as e:

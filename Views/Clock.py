@@ -24,15 +24,15 @@ class Clock(Frame):
         # initialize time label
         self.time1 = ''
         self.timeLbl = Label(self, font=(config["font_family"], config["xlarge_text_size"]), fg="white", bg="black")
-        self.timeLbl.pack(side=TOP, anchor=E)
+        self.timeLbl.pack(side=TOP, anchor=W)
         # initialize day of week
         self.day_of_week1 = ''
         self.dayOWLbl = Label(self, text=self.day_of_week1, font=(config["font_family"], config["small_text_size"]), fg="white", bg="black")
-        self.dayOWLbl.pack(side=TOP, anchor=E, padx=(0, 5))
+        self.dayOWLbl.pack(side=TOP, anchor=W, padx=(11, 0))
         # initialize date label
         self.date1 = ''
         self.dateLbl = Label(self, text=self.date1, font=(config["font_family"], config["small_text_size"]), fg="white", bg="black")
-        self.dateLbl.pack(side=TOP, anchor=E, padx=(0, 5))
+        self.dateLbl.pack(side=TOP, anchor=W, padx=(11, 0))
         self.tick()
 
     def tick(self):

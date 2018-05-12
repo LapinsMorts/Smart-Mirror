@@ -16,10 +16,11 @@ config = {
     "medium_text_size":28,
     "small_text_size":18,
     "font_family":"Helvetica",
-    "weather_image_width":100,
-    "weather_image_height":100,
+    "weather_image_width": 150,
+    "weather_image_height":150,
     "headline_wrap_width":1600,
-    "headlines_url":"https://news.google.com/news/rss/headlines/section/topic/NATION.en_ca/Canada?ned=ca&hl=en-CA&gl=CA" # get your own personnalized headline url at https://news.google.com/news/?ned=us&gl=US&hl=en
+    "headlines_url":"https://news.google.com/news/rss/headlines/section/topic/NATION.en_ca/Canada?ned=ca&hl=en-CA&gl=CA", # get your own personnalized headline url at https://news.google.com/news/?ned=us&gl=US&hl=en
+    "news_headlines":10
 }
 
 # maps open weather icons to
