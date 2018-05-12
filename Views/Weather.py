@@ -58,11 +58,11 @@ class Weather(Frame):
                 location2 = "%s, %s" % (location_obj['city'], location_obj['region_code'])
 
                 # get weather
-                weather_req_url = "https://api.darksky.net/forecast/%s/%s,%s?lang=%s&exclude=minutely,flags,alerts&units=%s" % weather_api_token, lat,lon, config["weather_lang"], config["weather_unit"])
+                weather_req_url = "https://api.darksky.net/forecast/%s/%s,%s?lang=%s&exclude=minutely,flags,alerts&units=%s" % (weather_api_token, lat,lon, config["weather_lang"], config["weather_unit"])
             else:
                 location2 = ""
                 # get weather
-                weather_req_url = "https://api.darksky.net/forecast/%s/%s,%s?lang=%s&exclude=minutely,flags,alerts&units=%s" % weather_api_token, config["latitude"], config["longitude"], config["weather_lang"], config["weather_unit"])
+                weather_req_url = "https://api.darksky.net/forecast/%s/%s,%s?lang=%s&exclude=minutely,flags,alerts&units=%s" % (weather_api_token, config["latitude"], config["longitude"], config["weather_lang"], config["weather_unit"])
 
             r = requests.get(weather_req_url)
             weather_obj = json.loads(r.text)

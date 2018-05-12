@@ -23,14 +23,14 @@ class ForecastedWeather(Frame):
         self.icon.config(image=photo)
         self.icon.image = photo
 
-        frame2 = Frame(self, width=80, height=50, background="black")
+        frame2 = Frame(self, width=100, height=50, background="black")
         frame2.pack_propagate(False)
         frame2.pack(side=LEFT, anchor=CENTER)
         self.min = Label(frame2, font=(config["font_family"], config["small_text_size"]), fg="white", bg="black")
         self.min.pack(side=LEFT, anchor=CENTER,padx=20)
         self.min.config(text=min)
 
-        frame3 = Frame(self, width=80, height=50, background="black")
+        frame3 = Frame(self, width=100, height=50, background="black")
         frame3.pack_propagate(False)
         frame3.pack(side=LEFT, anchor=CENTER)
         self.max = Label(frame3, font=(config["font_family"], config["small_text_size"]), fg="white", bg="black")
