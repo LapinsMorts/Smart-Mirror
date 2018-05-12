@@ -13,7 +13,7 @@ class News(Frame):
         self.newsLbl = Label(self, text=self.title, font=(config["font_family"], config["medium_text_size"]), fg="white", bg="black")
         self.newsLbl.pack(side=TOP, anchor=W)
         self.headlinesContainer = Frame(self, bg="black")
-        self.headlinesContainer.pack(side=TOP)
+        self.headlinesContainer.pack(side=TOP, pady=10)
         self.get_headlines()
 
     def get_headlines(self):
@@ -26,7 +26,7 @@ class News(Frame):
 
             for post in feed.entries[0:config["news_headlines"]]:
                 headline = NewsHeadline(self.headlinesContainer, post.title)
-                headline.pack(side=TOP, anchor=W)
+                headline.pack(side=TOP, anchor=W, pady=10)
         except Exception as e:
             traceback.print_exc()
             print "Error: %s. Cannot get news." % e
