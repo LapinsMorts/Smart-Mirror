@@ -22,7 +22,7 @@ class FullscreenWindow:
         self.clock.pack(side=TOP, anchor=NW, padx=100, pady=60)
         # weather
         self.weather = Weather(self.topFrame, self.clock.day_of_week1)
-        self.weather.pack(side=TOP, anchor=N, padx=100, pady=(60, 0))
+        self.weather.pack(side=TOP, anchor=NW, padx=100, pady=(60, 0))
         # news
         self.news = News(self.bottomFrame)
         self.news.pack(side=RIGHT, anchor=N, padx=100, pady=(80,0))

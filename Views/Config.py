@@ -5,7 +5,7 @@ config = {
     "date_format":"%b %d, %Y", # check python doc for strftime() for options
     "weather_lang":"en", # see https://darksky.net/dev/docs/forecast for full list of language parameters values
     "weather_unit":"ca", # see https://darksky.net/dev/docs/forecast for full list of unit parameters values
-    "weather_forecast_wrap_width":700,
+    "weather_forecast_wrap_width":500,
     "days_forecasted":4,
     "forecast_icone_width":50,
     "forecast_icone_height":50,
@@ -18,9 +18,10 @@ config = {
     "font_family":"Helvetica",
     "weather_image_width": 150,
     "weather_image_height":150,
-    "headline_wrap_width":1600,
+    "headline_wrap_width":700,
     "headlines_url":"https://news.google.com/news/rss/headlines/section/topic/NATION.en_ca/Canada?ned=ca&hl=en-CA&gl=CA", # get your own personnalized headline url at https://news.google.com/news/?ned=us&gl=US&hl=en
-    "news_headlines":10
+    "news_headlines":10,
+    "long_refresh_rate":600000
 }
 
 # maps open weather icons to

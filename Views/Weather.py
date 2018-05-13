@@ -125,7 +125,7 @@ class Weather(Frame):
             traceback.print_exc()
             print "Error: %s. Cannot get weather." % e
 
-        self.after(600000, self.get_weather)
+        self.after(config["long_refresh_rate"], self.get_weather)
 
     @staticmethod
     def convert_kelvin_to_fahrenheit(kelvin_temp):

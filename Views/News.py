@@ -31,4 +31,4 @@ class News(Frame):
             traceback.print_exc()
             print "Error: %s. Cannot get news." % e
 
-        self.after(600000, self.get_headlines)
+        self.after(config["long_refresh_rate"], self.get_headlines)
